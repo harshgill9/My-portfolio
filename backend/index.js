@@ -87,5 +87,11 @@ app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
 });
 
+require('dotenv').config();
+const mongoose = require('mongoose');
+
+mongoose.connect(process.env.MONGODB_URI)
+  .then(() => console.log("MongoDB connected to Atlas"))
+  .catch((err) => console.error("MongoDB error:", err));
 
 
