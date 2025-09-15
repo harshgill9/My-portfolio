@@ -1,5 +1,3 @@
-
-
 require('dotenv').config();
 const express = require('express');
 const bodyParser = require('body-parser');
@@ -36,6 +34,7 @@ app.post('/contact', async (req, res) => {
       from: process.env.EMAIL_USER,
       to: process.env.EMAIL_USER,
       subject: 'New Contact Form Submission',
+      replyTo:email,
       text: `
         Name: ${name}
         Email: ${email}
