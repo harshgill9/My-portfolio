@@ -40,6 +40,7 @@ body {
   list-style: none;
   display: flex;
   font-size: 1.4rem;
+  gap: 1.5em;
 }
 
 .nav-links li a {
@@ -83,9 +84,6 @@ body {
 }
 
 /* ===== Hero Section Styling ===== */
-
-
-
 .hero-section .container {
   display: flex;
   align-items: center;
@@ -613,8 +611,8 @@ body {
   font-size: 28px;
   cursor: pointer;
   color: white;
-      margin-top: -18rem;
-    margin-left: 15rem
+  /* margin-top: -18rem; */
+  margin-left: auto;
 }
 
 /* small phone */
@@ -623,26 +621,27 @@ body {
 @media (max-width: 768px)  /* Mobile View */{
   .menu-toggle {
     display: block;
-    margin-left: 24rem;
+    margin-top: -10rem;
+    margin-left: 16rem;
   }
   .logo {
     font-size: 2.5rem;
   }
 
   .nav-links {
-    display: none;
-        flex-direction: column;
-        gap: 15px;
-        width: 322px;
-        align-items: center;
-        background-color: #1f292b;
-        position: absolute;
-        top: 8px;
-        right: -213px;
-        padding: 15px;
-        border-radius: 10px;
-        z-index: 1000;
-  }
+   display: none;
+  flex-direction: column;
+  gap: 15px;
+  position: absolute;
+  top: 100%;
+  right: 2rem;
+  width: 200px;
+  background-color: #1a1a1a; /* ✅ dark background */
+  padding: 1rem;
+  border-radius: 10px;
+  z-index: 1000;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
 
   .nav-links.show {
     display: flex;
@@ -678,7 +677,7 @@ body {
     flex-direction: row-reverse;
     flex-wrap: wrap;
     text-align: left;
-    padding: 0 1rem;
+    padding: 0 2rem;
     gap: 1rem;
   }
 
@@ -717,6 +716,7 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 2rem;
+    padding: 1rem;
   }
   .card {
     width: 100%;
@@ -731,8 +731,6 @@ body {
     font-size: 1rem;
   }
   
-
-
   #projects h2 {
     font-size: 2.5rem;
     margin-top: 3rem;
@@ -740,10 +738,11 @@ body {
   #projects .para {
     font-size: 1rem;
     padding-top: 0.5rem;
+    padding: 1rem;
   }
 
   #contact {
-    padding: 0px 29px;
+    padding: 1rem 29px;
   }
   .contact-content {
     flex-direction: column;
